@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_faf6_regional
+      - name: raw_faf_crosswalk
+      - name: raw_noaa_details
+      - name: raw_noaa_locations
+      - name: raw_modis_ndvi_by_state

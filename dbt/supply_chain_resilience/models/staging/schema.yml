@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_faf_shipments
+    description: Cleaned freight shipment records by origin/destination zone, commodity, and mode.
+    columns:
+      - name: origin_zone_id
+        description: FAF zone ID where the shipment originates.
+        tests: [not_null]
+      - name: dest_zone_id
+        description: FAF zone ID where the shipment is delivered.
+        tests: [not_null]
+
+  - name: stg_faf_crosswalk
+    description: Maps each FAF zone to its state FIPS code and CFS metro area.
+    columns:
+      - name: zone_id
+        description: Unique FAF zone identifier.
+        tests: [unique, not_null]
+
+  - name: stg_noaa_events
+    description: Cleaned NOAA storm event records with state, date, damage, and location fields.
+    columns:
+      - name: event_id
+        description: Unique NOAA storm event identifier.
+        tests: [unique, not_null]

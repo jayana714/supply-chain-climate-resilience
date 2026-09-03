@@ -1,0 +1,75 @@
+[0m17:38:18.724140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10641d2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1108cf390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1108cf610>]}
+
+
+============================== 17:38:18.726428 | 75b860b4-dcbb-46e8-999f-e1d867147c35 ==============================
+[0m17:38:18.726428 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:38:18.726683 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'quiet': 'False', 'static_parser': 'True', 'introspect': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_cache_events': 'False', 'version_check': 'True', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'printer_width': '80', 'target_path': 'None', 'log_format': 'default', 'log_path': 'logs', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt init supply_chain_resilience', 'partial_parse': 'True', 'use_colors': 'True', 'profiles_dir': '/Users/jayanasarma/.dbt'}
+[0m17:38:18.736708 [info ] [MainThread]: Creating dbt configuration folder at /Users/jayanasarma/.dbt
+[0m17:38:18.737484 [debug] [MainThread]: Starter project path: /Users/jayanasarma/Desktop/supply-chain-climate-resilience/venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m17:38:18.741012 [info ] [MainThread]: Setting up your profile.
+[0m17:38:53.897232 [info ] [MainThread]: Profile supply_chain_resilience written to /Users/jayanasarma/.dbt/profiles.yml using target's sample configuration. Once updated, you'll be able to start developing with dbt.
+[0m17:38:53.898177 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m17:38:53.898424 [info ] [MainThread]: dbt version: 1.12.3
+[0m17:38:53.898568 [info ] [MainThread]: python version: 3.13.9
+[0m17:38:53.898669 [info ] [MainThread]: python path: /Users/jayanasarma/Desktop/supply-chain-climate-resilience/venv/bin/python
+[0m17:38:53.898763 [info ] [MainThread]: os info: macOS-15.7.7-arm64-arm-64bit-Mach-O
+[0m17:38:53.916919 [info ] [MainThread]: Using profiles dir at /Users/jayanasarma/.dbt
+[0m17:38:53.917171 [info ] [MainThread]: Using profiles.yml file at /Users/jayanasarma/.dbt/profiles.yml
+[0m17:38:53.917310 [info ] [MainThread]: Using dbt_project.yml file at /Users/jayanasarma/Desktop/supply-chain-climate-resilience/dbt/supply_chain_resilience/dbt_project.yml
+[0m17:38:53.918549 [info ] [MainThread]: adapter type: duckdb
+[0m17:38:53.918680 [info ] [MainThread]: adapter version: 1.11.0
+[0m17:38:53.951466 [info ] [MainThread]: Configuration:
+[0m17:38:53.951662 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:38:53.951775 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:38:53.951867 [info ] [MainThread]: Required dependencies:
+[0m17:38:53.952018 [debug] [MainThread]: Executing "git --help"
+[0m17:38:53.967025 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:38:53.967490 [debug] [MainThread]: STDERR: "b''"
+[0m17:38:53.967619 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:38:53.967754 [info ] [MainThread]: Connection:
+[0m17:38:53.967869 [info ] [MainThread]:   database: dev
+[0m17:38:53.967959 [info ] [MainThread]:   schema: main
+[0m17:38:53.968041 [info ] [MainThread]:   path: dev.duckdb
+[0m17:38:53.968126 [info ] [MainThread]:   config_options: None
+[0m17:38:53.968202 [info ] [MainThread]:   extensions: None
+[0m17:38:53.968283 [info ] [MainThread]:   settings: {}
+[0m17:38:53.968359 [info ] [MainThread]:   external_root: .
+[0m17:38:53.968440 [info ] [MainThread]:   use_credential_provider: None
+[0m17:38:53.968516 [info ] [MainThread]:   attach: None
+[0m17:38:53.968592 [info ] [MainThread]:   filesystems: None
+[0m17:38:53.968666 [info ] [MainThread]:   remote: None
+[0m17:38:53.968741 [info ] [MainThread]:   plugins: None
+[0m17:38:53.968816 [info ] [MainThread]:   disable_transactions: False
+[0m17:38:53.969064 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m17:38:54.005341 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m17:38:54.033024 [debug] [MainThread]: Using duckdb connection "debug"
+[0m17:38:54.033182 [debug] [MainThread]: On debug: select 1 as id
+[0m17:38:54.033284 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:38:54.040829 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m17:38:54.041196 [debug] [MainThread]: On debug: Close
+[0m17:38:54.041495 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:38:54.041619 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:38:54.041755 [info ] [MainThread]: Your new dbt project "supply_chain_resilience" was created!
+Initialized new project in /Users/jayanasarma/Desktop/supply-chain-climate-resilience/dbt/supply_chain_resilience/supply_chain_resilience
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:38:54.051395 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 35.363735, "process_in_blocks": "0", "process_kernel_time": 0.175656, "process_mem_max_rss": "152502272", "process_out_blocks": "0", "process_user_time": 0.678351}
+[0m17:38:54.051646 [debug] [MainThread]: Command `dbt init` succeeded at 17:38:54.051603 after 35.36 seconds
+[0m17:38:54.051779 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:38:54.051915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110bae520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110921a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110e309e0>]}
+[0m17:38:54.052080 [debug] [MainThread]: Flushing usage events
+[0m17:38:54.481845 [debug] [MainThread]: An error was encountered while trying to flush usage events

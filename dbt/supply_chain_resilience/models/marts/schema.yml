@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dim_zone
+    description: One row per FAF shipping zone with its state and metro area attributes.
+    columns:
+      - name: zone_id
+        description: Unique FAF zone identifier.
+        tests: [unique, not_null]
+
+  - name: fct_shipments
+    description: Shipment volume and value aggregated by origin zone.
+    columns:
+      - name: zone_id
+        description: FAF zone ID (one row per zone).
+        tests: [unique, not_null]
+
+  - name: fct_supply_chain_risk
+    description: The core mart — joins each shipping zone to its shipment volume and two climate risk views (absolute and intensity-adjusted). This is the table Power BI connects to.
+    columns:
+      - name: zone_id
+        description: Unique FAF zone identifier.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('dim_zone')
+              field: zone_id
+      - name: climate_risk_tier
+        description: Low/Medium/High tier based on absolute storm exposure for the zone's state.
+        tests:
+          - accepted_values:
+              values: ['Low', 'Medium', 'High']
+      - name: risk_intensity_tier
+        description: Low/Medium/High tier based on storm damage relative to shipment value for the zone's state.
+        tests:
+          - accepted_values:
+              values: ['Low', 'Medium', 'High']

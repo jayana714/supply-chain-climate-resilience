@@ -1,0 +1,8 @@
+venv/
+raw/
+*.duckdb
+__pycache__/
+.DS_Store
+dbt/supply_chain_resilience/target/
+dbt/supply_chain_resilience/logs/
+dbt/supply_chain_resilience/.tableau-temp/
