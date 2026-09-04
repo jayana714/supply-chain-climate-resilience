@@ -64,6 +64,10 @@ graph LR
     F --> G[Tableau Dashboard]
 ```
 
+**The actual generated lineage graph** (via `dbt docs`):
+
+![dbt lineage graph](docs/lineage_graph.png)
+
 9 dbt models · 15 automated data quality tests · full lineage documented via `dbt docs`
 
 ## Tech Stack
