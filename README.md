@@ -29,21 +29,21 @@
 
 ## The Problem
 
-Most supply chain monitoring tracks *whether* shipments are late — not *which regions are becoming climate risks before a disruption hits*. This project builds that forward-looking view: combining where freight actually flows with where storms and vegetation stress are concentrated, to flag high-risk, high-value shipping regions before they become a problem.
+Most supply chain dashboards tell you a shipment is late *after* it happens. I wanted to build something that looks forward instead — flagging which regions are genuinely exposed to climate disruption, before that disruption hits a shipment. So I combined where freight actually flows with where storms and vegetation stress are concentrated, to surface the regions that matter most: not just risky, but risky *and* high-value.
 
 ## Key Findings
 
-**🔴 Texas has the highest absolute climate risk** — the most total storm damage and event count of any state in the dataset. But its satellite-measured vegetation is *healthier* than its own 2020 baseline right now — a reminder that historical exposure and current conditions tell different stories.
+🔴 **Texas came out as the highest absolute risk** — more total storm damage and events than any other state in the dataset. But when I pulled real satellite data, its vegetation was actually healthier than its own 2020 baseline. That contrast stuck with me: a state's storm history and its current condition aren't the same story.
 
-**🟡 Hawaii is nearly invisible on a raw damage ranking — but it's the most exposed state relative to its shipping volume.** A simple "biggest total risk" score misses it entirely; adjusting for shipment value surfaces it as genuinely fragile.
+🟡 **Hawaii was the real surprise.** It barely shows up on a raw damage ranking — but once I adjusted for how little freight actually moves through it, it became the most exposed state in the whole dataset. A simple "biggest total risk" score would have missed it completely, which is exactly why I built two separate scores instead of one.
 
-**🛰️ Real satellite evidence, not just numbers.** NDVI (vegetation health) computed directly from raw Sentinel-2 band math shows a clear, visible contrast between Houston's river/park corridors and its dense urban core:
+🛰️ **I wanted proof, not just numbers**, so I computed real NDVI (vegetation health) directly from raw Sentinel-2 satellite bands for three case-study cities, instead of relying on a pre-built index:
 
 | Houston, TX | Honolulu, HI | Los Angeles, CA |
 |---|---|---|
 | ![Houston NDVI](docs/ndvi_houston_tx.png) | ![Honolulu NDVI](docs/ndvi_honolulu_hi.png) | ![LA NDVI](docs/ndvi_los_angeles_ca.png) |
 
-*Green = healthy vegetation, red = stressed/urban. Computed from raw Sentinel-2 red/NIR band math, not a pre-built index.*
+*Green = healthy vegetation, red = stressed/urban.*
 
 ## What This Project Does
 
